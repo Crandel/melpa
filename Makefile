@@ -128,7 +128,6 @@ PKGDIR  := packages
 HTMLDIR := html
 CHANNEL_CONFIG := "(progn\
   (setq package-build-stable nil)\
-  (setq package-build-all-publishable t)\
   (setq package-build-build-function\
         'package-build--build-multi-file-package)\
   (setq package-build-snapshot-version-functions\
@@ -154,7 +153,6 @@ PKGDIR  := packages-snapshot
 HTMLDIR := html-snapshot
 CHANNEL_CONFIG := "(progn\
   (setq package-build-stable nil)\
-  (setq package-build-all-publishable t)\
   (setq package-build-snapshot-version-functions\
         '(package-build-release+count-version))\
   (setq package-build-release-version-functions\
@@ -169,7 +167,6 @@ PKGDIR  := packages-release
 HTMLDIR := html-release
 CHANNEL_CONFIG := "(progn\
   (setq package-build-stable t)\
-  (setq package-build-all-publishable t)\
   (setq package-build-snapshot-version-functions\
         '(package-build-release+count-version))\
   (setq package-build-release-version-functions\
