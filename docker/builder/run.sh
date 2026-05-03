@@ -14,10 +14,7 @@
 # by giving the lisp variable a non-nil default value.
 LISP_CONFIG="(setq package-build-timeout-secs 600)"
 
-MELPA_REPO=/mnt/store/melpa
-cd "${MELPA_REPO}"
-
-BUILD_STATUS_FILE="${MELPA_REPO}/html/build-status.json"
+BUILD_STATUS_FILE="html/build-status.json"
 
 export INSIDE_DOCKER=true
 export GIT_HTTP_USER_AGENT="melpa.org"
