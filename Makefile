@@ -153,11 +153,6 @@ PKGDIR  := packages-snapshot
 HTMLDIR := html-snapshot
 CHANNEL_CONFIG := "(progn\
   (setq package-build-stable nil)\
-  (setq package-build-snapshot-version-functions\
-        '(package-build-release+count-version))\
-  (setq package-build-release-version-functions\
-        '(package-build-tag-version\
-          package-build-header-version))\
   (setq package-build-badge-data '(\"snapshot\" \"\#30a14e\")))"
 
 else ifeq ($(MELPA_CHANNEL), release)
@@ -167,12 +162,6 @@ PKGDIR  := packages-release
 HTMLDIR := html-release
 CHANNEL_CONFIG := "(progn\
   (setq package-build-stable t)\
-  (setq package-build-snapshot-version-functions\
-        '(package-build-release+count-version))\
-  (setq package-build-release-version-functions\
-        '(package-build-tag-version\
-          package-build-header-version\
-          package-build-fallback-count-version))\
   (setq package-build-badge-data '(\"release\" \"\#9be9a8\")))"
 
 else
