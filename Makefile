@@ -118,12 +118,9 @@ ifdef DOCKER_MELPA_CHANNEL
 MELPA_CHANNEL = $(DOCKER_MELPA_CHANNEL)
 endif
 
-ifndef MELPA_CHANNEL
-PKGDIR  := packages
-HTMLDIR := html
-CHANNEL_CONFIG := "()"
+MELPA_CHANNEL ?= unstable
 
-else ifeq ($(MELPA_CHANNEL), unstable)
+ifeq ($(MELPA_CHANNEL), unstable)
 PKGDIR  := packages
 HTMLDIR := html
 CHANNEL_CONFIG := "(progn\
